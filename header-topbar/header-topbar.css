@@ -1,0 +1,45 @@
+:root {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+h2 {
+  color: #fff;
+  font-size: 1.2rem;
+}
+
+.topbar-container,
+.header-container,
+.main-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+.topbar {
+  height: 70px;
+  background-color: #282D30;
+}
+
+.header {
+  height: 150px;
+  background-color: #52966D;
+}
+
+@media (min-width: 52em) {
+  .header.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+}
