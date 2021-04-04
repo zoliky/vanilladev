@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Serve Image in Next-Gen Formats</title>
+</head>
+<body>
+  <div class="container">
+    <a href="#">
+      <picture>
+        <source type="image/avif" srcset="butterfly.avif">
+        <source type="image/webp" srcset="butterfly.webp">
+        <img src="butterfly.jpg" loading="lazy" alt="butterfly">
+      </picture>
+    </a>
+  </div>
+</body>
+</html>
