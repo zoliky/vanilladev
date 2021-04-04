@@ -1,0 +1,36 @@
+:root {
+  box-sizing: border-box;
+  --header-height: 150px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.header-container,
+.main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: var(--header-height);
+  background: lightseagreen;
+  transition: top 0.3s linear 0s;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+}
+
+.spacer {
+  margin-bottom: calc(var(--header-height) + 20px);
+}
