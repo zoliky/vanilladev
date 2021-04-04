@@ -1,0 +1,6 @@
+#+TITLE: Vanilla Dev
+#+AUTHOR: Zoltán Király
+#+EMAIL: zoliky@gmail.com
+#+DATE: <2021-04-02 Fri>
+
+Vanilla Dev

@@ -1,0 +1,114 @@
+:root {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  color: #504e4e;
+}
+
+.accordion-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+header > h2 {
+  color: #551b45;
+  margin: .4em 0 0;
+  font-weight: 400;
+  font-size: 2.375rem;
+  font-family: "Montserrat", sans-serif;
+}
+
+header + p {
+  font-size: 1.125rem;
+  font-family: "Oxygen", sans-serif;
+}
+
+.panel-container {
+  margin: 2em 0 0;
+}
+
+.panel {
+  margin: 0.9375em 0 0;
+  border: 1px solid rgba(0, 0, 0, .15);
+  box-shadow: 0 .125em .275em 0 rgba(0, 0, 0, .125);
+}
+
+.panel-header {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.arrow {
+  position: relative;
+  width: 15px;
+  height: 15px;
+  margin: 0 15px;
+}
+
+.arrow::before,
+.arrow::after {
+  position: absolute;
+  content: "";
+  top: 50%;
+  width: 100%;
+  height: 3px;
+  background: #ccc;
+  transition: all .2s ease-out;
+  transform: translateY(-50%);
+}
+
+.arrow::after {
+  transform: translateY(-50%) rotate(-90deg);
+}
+
+.panel.open .arrow::before {
+  transform: translateY(-50%) rotate(45deg);
+}
+
+.panel.open .arrow::after {
+  transform: translateY(-50%) rotate(-45deg);
+}
+
+.panel-header > h3 {
+  margin: 0;
+  color: #272727;
+  padding: 0.875em 0;
+  font-weight: 400;
+  font-size: 1.375rem;
+  font-family: "Lato", sans-serif;
+  transition: .25s color ease-in;
+}
+
+.panel-header:hover > h3 {
+  color: #8b133f;
+}
+
+.panel-body {
+  max-height: 0;
+  overflow: hidden;
+  transition: .35s max-height .2s;
+}
+
+.panel-body-inner {
+  padding: .5em 1em;
+  line-height: 1.7;
+  font-weight: 400;
+  font-size: 1.0625rem;
+  font-family: "Oxygen", sans-serif;
+  border-top: 1px solid rgba(0, 0, 0, .15);
+}
+
+.panel.open .panel-body {
+  max-height: 100vh;
+}

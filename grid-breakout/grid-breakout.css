@@ -1,0 +1,53 @@
+:root {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.grid-layout {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(4, auto) 1fr;
+  min-height: 100vh; /* for the sticky footer */
+}
+
+.grid-layout > * {
+  padding: 10px;
+}
+
+.header,
+.footer {
+  background: #46B6A8;
+}
+
+.section {
+  background: #FCBA9B;
+}
+
+.footer {
+  align-self: end; /* for the sticky footer */
+}
+
+@media (min-width: 52em) {
+  .grid-layout {
+    grid-template-columns: minmax(1em, 1fr) minmax(0, 75em) minmax(1em, 1fr);
+  }
+
+  .grid-layout > * {
+    grid-column: 2;
+  }
+
+  .grid-layout > .full {
+    grid-column: 1/-1;
+  }
+}
