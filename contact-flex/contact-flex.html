@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="contact-flex.css">
+  <title>Contact Form With Flexbox</title>
+</head>
+<body>
+  <section class="contact">
+    <div class="contact-container">
+      <form class="contactform" action="" method="POST">
+
+        <div class="form-group">
+          <div class="col-50pct">
+            <label for="form-name">Your Name</label>
+            <input class="form-control" type="text" name="name" id="form-name" required>
+          </div>
+          <div class="col-50pct">
+            <label for="form-email">Your Email Address</label>
+            <input class="form-control" type="email" name="email" id="form-email" required>
+          </div>
+        </div> <!-- / .form-group -->
+
+        <div class="form-group">
+          <div class="col-100pct">
+            <label for="form-message">Message</label>
+            <textarea class="form-control" id="form-message"></textarea>
+          </div>
+        </div> <!-- / .form-group -->
+
+        <div class="form-group">
+          <div class="col-50pct">
+            <input type="submit" name="submit" value="Send Message">
+          </div>
+        </div> <!-- / .form-group -->
+
+      </form>
+    </div> <!-- / .contact-container -->
+  </section> <!-- / .contact -->
+</body>
+</html>

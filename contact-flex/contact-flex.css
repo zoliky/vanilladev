@@ -1,0 +1,59 @@
+:root {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.contact-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+.form-group {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.col-50pct,
+.col-100pct {
+  flex: 0 0 100%;
+  padding: 20px 15px 0;
+}
+
+label {
+  display: inline-block;
+  margin-bottom: .5em;
+}
+
+input,
+textarea {
+  border: 1px solid rgba(191, 216, 227, .8);
+  border-radius: 0.3125em;
+  font-size: 1.1rem;
+  padding: 5px;
+}
+
+textarea {
+  min-height: 200px;
+}
+
+.form-control {
+  display: block;
+  width: 100%;
+}
+
+@media (min-width: 37.5em) {
+  .col-50pct {
+    flex: 0 0 50%;
+  }
+}
