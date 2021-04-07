@@ -1,0 +1,27 @@
+:root {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.list > li::marker {
+  color: green;
+  content: "\f00c";
+  font-size: 1rem;
+  font-weight: 800;
+  font-family: "Font Awesome 5 Free";
+}
+
+.list > li {
+  font-size: 1.1rem;
+  padding: 0 0 .625em .75em;
+}
