@@ -1,0 +1,254 @@
+/* ---------------------------------------------------------------------------
+## Rulesets that all effects share
+----------------------------------------------------------------------------*/
+:root {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+section {
+  height: 25vh;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid #ccc;
+}
+
+h1 {
+  color: #127fb5;
+  font-size: 1.8rem;
+}
+
+.nav-menu {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.nav-menu > li + li {
+  margin-left: 1.5em;
+}
+
+.nav-menu > li > a {
+  display: block;
+  color: #127fb5;
+  font-size: 1.8rem;
+  padding: .5em 0 .5em;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: "Raleway", sans-serif;
+}
+
+/* ---------------------------------------------------------------------------
+## Effect 1
+----------------------------------------------------------------------------*/
+.effect-1 .nav-menu > li > a::after {
+  display: block;
+  content: "";
+  width: 100%;
+  height: 2px;
+  background: currentColor;
+  transform: scaleX(0);
+  transform-origin: bottom left;
+  transition: transform .5s ease;
+}
+
+.effect-1 .nav-menu > li > a.active::after,
+.effect-1 .nav-menu > li > a:hover::after {
+  transform: scaleX(1);
+}
+
+/* ---------------------------------------------------------------------------
+## Effect 2
+----------------------------------------------------------------------------*/
+.effect-2 .nav-menu > li > a::after {
+  display: block;
+  content: "";
+  width: 100%;
+  height: 2px;
+  background: currentColor;
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  transition: transform .5s ease;
+}
+
+.effect-2 .nav-menu > li > a.active::after,
+.effect-2 .nav-menu > li > a:hover::after {
+  transform: scaleX(1);
+}
+
+/* ---------------------------------------------------------------------------
+## Effect 3
+----------------------------------------------------------------------------*/
+.effect-3 .nav-menu > li > a::before,
+.effect-3 .nav-menu > li > a::after {
+  display: block;
+  content: "";
+  width: 100%;
+  height: 2px;
+  background: currentColor;
+  transform: scaleX(0);
+  transition: transform .5s ease;
+}
+.effect-3 .nav-menu > li > a::before {
+  transform-origin: top left;
+}
+
+.effect-3 .nav-menu > li > a::after {
+  transform-origin: bottom right;
+}
+
+.effect-3 .nav-menu > li > a.active::before,
+.effect-3 .nav-menu > li > a.active::after,
+.effect-3 .nav-menu > li > a:hover::before,
+.effect-3 .nav-menu > li > a:hover::after {
+  transform: scaleX(1);
+}
+
+/* ---------------------------------------------------------------------------
+## Effect 4
+----------------------------------------------------------------------------*/
+.effect-4 .nav-menu > li > a::after {
+  display: block;
+  content: "";
+  width: 100%;
+  height: 2px;
+  background: currentColor;
+  transform: scaleX(0);
+  transition: transform .5s ease;
+}
+
+.effect-4 .nav-menu > li > a.active::after,
+.effect-4 .nav-menu > li > a:hover::after {
+  transform: scaleX(1);
+}
+
+/* ---------------------------------------------------------------------------
+## Effect 5
+----------------------------------------------------------------------------*/
+.effect-5 .nav-menu > li > a {
+  transition: color .3s ease-in-out;
+  /* The other properties are inherited from .nav-menu > li > a */
+}
+
+.effect-5 .nav-menu > li > a::before {
+  display: block;
+  content: "";
+  width: 100%;
+  height: 4px;
+  margin-bottom: 8px;
+  background: currentColor;
+  transform: scaleX(0);
+  transition: transform .5s ease;
+}
+
+.effect-5 .nav-menu > li > a.active::before,
+.effect-5 .nav-menu > li > a:hover::before {
+  transform: scaleX(1);
+}
+
+.effect-5 .nav-menu > li > a.active.blue,
+.effect-5 .nav-menu > li > a:hover.blue {
+  color: #127fb5;
+}
+
+.effect-5 .nav-menu > li > a.active.red,
+.effect-5 .nav-menu > li > a:hover.red {
+  color: #f23d3d;
+}
+
+.effect-5 .nav-menu > li > a.active.orange,
+.effect-5 .nav-menu > li > a:hover.orange {
+  color: #f28e13;
+}
+
+.effect-5 .nav-menu > li > a.active.green,
+.effect-5 .nav-menu > li > a:hover.green {
+  color: #3c8c03;
+}
+
+.effect-5 .nav-menu > li > a.active.violet,
+.effect-5 .nav-menu > li > a:hover.violet {
+  color: violet;
+}
+
+/* ---------------------------------------------------------------------------
+## Effect 6
+----------------------------------------------------------------------------*/
+.effect-6 .nav-menu > li > a {
+  padding: .2em 0 .2em;
+  position: relative;
+  /* The other properties are inherited from .nav-menu > li > a */
+}
+
+.effect-6 .nav-menu > li > a::before,
+.effect-6 .nav-menu > li > a::after {
+  display: block;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  left: 0;
+  opacity: 0;
+  background: currentColor;
+  transition: all .3s ease;
+  transform: translateY(-10px);
+}
+
+.effect-6 .nav-menu > li > a::before {
+  top: 0;
+  transform: translateY(-10px);
+}
+
+.effect-6 .nav-menu > li > a::after {
+  bottom: 0;
+  transform: translateY(10px);
+}
+
+.effect-6 .nav-menu > li > a.active::before,
+.effect-6 .nav-menu > li > a.active::after,
+.effect-6 .nav-menu > li > a:hover::before,
+.effect-6 .nav-menu > li > a:hover::after {
+  opacity: 1;
+  transform: translateY(0px);
+}
+
+/* ---------------------------------------------------------------------------
+## Effect 7
+----------------------------------------------------------------------------*/
+.effect-7 .nav-menu > li > a {
+  padding: 20px 2px;
+  position: relative;
+  /* The other properties are inherited from .nav-menu > li > a */
+}
+
+.effect-7 .nav-menu > li > a::after {
+  display: block;
+  content: "";
+  position: absolute;
+  height: 3px;
+  left: 2px;
+  right: 2px;
+  bottom: 0;
+  opacity: 0;
+  background: currentColor;
+  transition: all .35s ease;
+}
+
+.effect-7 .nav-menu > li > a.active::after,
+.effect-7 .nav-menu > li > a:hover::after {
+  opacity: 1;
+  bottom: 16px;
+}
