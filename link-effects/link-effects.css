@@ -17,7 +17,7 @@ body {
 }
 
 section {
-  height: 25vh;
+  height: 225px;
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;

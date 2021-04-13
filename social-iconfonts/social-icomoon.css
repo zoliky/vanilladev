@@ -1,0 +1,124 @@
+:root {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+@font-face {
+  font-family: 'Icomoon';
+  src: url('icomoon/icomoon_free.ttf') format('truetype');
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+i {
+  font-style: normal;
+}
+
+.social {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.social > li + li {
+  margin-left: 1em;
+}
+
+.social > li > a {
+  display: block;
+  position: relative;
+  color: #696969;
+  font-size: 2rem;
+  text-decoration: none;
+}
+
+.social > li > a {
+  transition: color .5s;
+}
+
+.tooltip {
+  position: absolute;
+  bottom: 100%;
+  left: -40px;
+  width: 120px;
+  padding: .5em;
+  color: #fff;
+  opacity: 0;
+  visibility: hidden;
+  background: #f47fb5;
+  font-family: 'Alegreya', sans-serif;
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+  border-radius: 0.170454545em;
+  text-transform: uppercase;
+  text-align: center;
+  transform: translateY(10px);
+  transition: all .25s ease-out;
+}
+
+.tooltip::after {
+  content: "";
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid #f47fb5;
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  margin-left: -13px;
+}
+
+.social a:hover .tooltip {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+[class*="icon-"] {
+  font-family: "Icomoon";
+}
+
+.icon-facebook::before {
+  content: "\ea90";
+}
+
+.icon-twitter::before {
+  content: "\ea96";
+}
+
+.icon-github::before {
+  content: "\eab0";
+}
+
+.icon-email::before {
+  content: "\e945";
+}
+
+.icon-facebook:hover {
+  color: #3a559f;
+}
+
+.icon-twitter:hover {
+  color: #55acee;
+}
+
+.icon-github:hover {
+  color: #76cc1e;
+}
+
+.icon-email:hover {
+  color: #fccc45;
+}

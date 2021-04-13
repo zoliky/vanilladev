@@ -1,0 +1,91 @@
+:root {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+@font-face {
+  font-family: 'ElegantIcons';
+  src: url('elegant/ElegantIcons.eot'),
+       url('elegant/ElegantIcons.woff') format('woff'),
+       url('elegant/ElegantIcons.ttf') format('truetype'),
+       url('elegant/ElegantIcons.svg#ElegantIcons') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+i {
+  font-style: normal;
+}
+
+.social {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.social > li + li {
+  margin-left: 1em;
+}
+
+.social > li > a {
+  display: block;
+  position: relative;
+  width: 40px;
+  height: 40px;
+  color: #fff;
+  font-size: 1.6rem;
+  border-radius: 50%;
+  transition: background 0.5s;
+  background: #127fb5;
+}
+
+.social .elegant {
+  font-family: ElegantIcons;
+  position: absolute;
+  font-size: 1.4rem;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.social > li > a:hover {
+  background: black;
+}
+
+.screen-readers {
+  position: absolute;
+  padding: 0;
+  border: 0;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+}
+
+.icon-facebook::before {
+  content: "\e093";
+}
+
+.icon-twitter::before {
+  content: "\e094";
+}
+
+.icon-instagram::before {
+  content: "\e09a";
+}
