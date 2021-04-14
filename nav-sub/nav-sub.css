@@ -1,0 +1,281 @@
+:root {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  height: 100px;
+  background: #fff;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+}
+
+.header-container {
+  position: relative;
+  height: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Menu Toggle Button */
+.menu-toggle {
+  border: 0;
+  padding: 1em;
+  display: block;
+  font-size: 1rem;
+  font-weight: bold;
+  line-height: 1.5;
+  margin: 1px 0 2px;
+  background: transparent;
+}
+
+.menu-toggle:focus {
+  outline: thin solid #ccc;
+}
+
+/* Toggle SVGs */
+.icon {
+  position: relative;
+  display: inline-block;
+  top: -0.0625em;
+  fill: currentColor;
+  vertical-align: middle;
+}
+
+.icon-hamburger,
+.icon-close {
+  height: 1.5625em;
+  width: 1.5625em;
+}
+
+.icon-angle-down {
+  width: 1em;
+  height: 1em;
+}
+
+.nav .icon-close {
+  display: none;
+}
+
+.nav.open .icon-hamburger {
+  display: none;
+}
+
+.nav.open .icon-close {
+  display: inline-block;
+}
+
+/* Menu Container */
+.menu-container {
+  position: absolute;
+  left: 0;
+  top: 100%;
+  width: 100%;
+  overflow: hidden;
+  background: #fff;
+}
+
+/* Menu */
+.nav ul {
+  display: none;
+  margin: 0;
+  background: #fff;
+  list-style: none;
+  text-align: left;
+}
+
+.nav-menu {
+  padding: 0.75em 1.695em;
+}
+
+.nav.open .nav-menu {
+  display: block;
+}
+
+.nav a {
+  display: block;
+  padding: .8em 0;
+  color: #222;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.2s;
+  font-family: 'Libre Franklin', sans-serif;
+}
+
+.nav a:focus {
+  outline: thin dotted;
+}
+
+.nav a:hover {
+  color: #767676;
+}
+
+.nav ul ul {
+  display: none;
+  padding: 0 0 0 1.5em;
+}
+
+.nav ul ul.open {
+  display: block;
+}
+
+.nav li {
+  border-bottom: 1px solid #eee;
+  position: relative;
+}
+
+.nav li li,
+.nav li:last-child {
+  border: 0;
+}
+
+.dropdown-toggle {
+  border: 0;
+  color: #222;
+  display: block;
+  position: absolute;
+  top: 0;
+  right: -0.5em;
+  margin: 0 auto;
+  padding: 0.5em 1em;
+  box-shadow: none;
+  text-shadow: none;
+  line-height: 1.5;
+  font-size: 16px;
+  background-color: transparent;
+}
+
+.dropdown-toggle:focus {
+  outline: thin dotted;
+}
+
+.nav ul a > .icon {
+  display: none;
+}
+
+.dropdown-toggle.open .icon {
+  transform: rotate(-180deg);
+}
+
+@media (min-width: 52em) {
+  .menu-toggle,
+  .dropdown-toggle {
+    display: none;
+  }
+
+  .menu-container {
+    position: initial;
+    overflow: initial;
+  }
+
+  .nav ul,
+  .nav ul ul,
+  .nav > div > ul {
+    display: block;
+  }
+
+  .nav ul {
+    background: transparent;
+    padding: 0;
+  }
+
+  .nav > div > ul {
+    border: 0;
+    padding: 0;
+    margin-bottom: 0;
+  }
+
+  .nav li {
+    border: 0;
+    display: inline-block;
+  }
+
+  .nav li li {
+    display: block;
+    transition: background 0.2s ease-in-out;
+  }
+
+  .nav ul ul {
+    background: #fff;
+    position: absolute;
+    border: 1px solid #bbb;
+    left: -999em;
+    padding: 0;
+    top: 100%;
+    z-index: 99999;
+  }
+
+  .nav a {
+    padding: 1em 1.25em;
+  }
+
+  .nav .menu-item-has-children > a > .icon {
+    position: relative;
+    display: inline;
+    left: 5px;
+    top: -1px;
+  }
+
+  .nav ul ul .menu-item-has-children > a .icon {
+    margin-top: -9px;
+    position: absolute;
+    left: auto;
+    right: 1em;
+    top: 50%;
+    transform: rotate(-90deg);
+  }
+
+  .nav ul li.menu-item-has-children:before {
+    border-color: transparent transparent #bbb;
+    bottom: 0;
+  }
+
+  .nav ul li.menu-item-has-children:after {
+    border-color: transparent transparent #fff;
+  }
+
+  .nav ul li:hover > ul,
+  .nav ul li:focus-within > ul {
+    left: 0.5em;
+    right: auto;
+  }
+
+  .nav ul ul li:hover > ul,
+  .nav ul ul li:focus-within > ul {
+    left: 100%;
+    right: auto;
+  }
+
+  .nav ul ul a {
+    padding: 0.75em 1.25em;
+    width: 16em;
+  }
+
+  .nav ul ul ul {
+    left: -999em;
+    margin-top: -1px;
+    top: 0;
+  }
+
+  .nav li li:hover,
+  .nav li li a:focus {
+    background: #767676;
+  }
+
+  .nav li li:hover > a,
+  .nav li li a:focus {
+    color: #fff;
+  }
+}
