@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="contact-grid.css">
+  <title>Contact Form With CSS Grid</title>
+</head>
+<body>
+  <section class="contact">
+    <div class="contact-container">
+      <form class="contactform" action="" method="POST">
+        
+        <div>
+          <label for="form-name">Your Name</label>
+          <input class="form-control" type="text" name="name" id="form-name" required>
+        </div>
+        
+        <div>
+          <label for="form-email">Your Email Address</label>
+          <input class="form-control" type="email" name="email" id="form-email" required>
+        </div>
+        
+        <div class="col-3">
+          <label for="form-message">Message</label>
+          <textarea class="form-control" id="form-message"></textarea>
+        </div>
+        
+        <div>
+          <input type="submit" name="submit" value="Send Message">
+        </div>
+        
+      </form>
+    </div> <!-- / .contact-container -->
+  </section> <!-- / .contact -->
+</body>
+</html>

@@ -1,0 +1,56 @@
+:root {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.contact-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+.contactform {
+  display: grid;
+  grid-gap: 20px;
+}
+
+label {
+  display: inline-block;
+  margin-bottom: .5em;
+}
+
+input,
+textarea {
+  border: 1px solid rgba(191, 216, 227, .8);
+  border-radius: 0.3125em;
+  font-size: 1.1rem;
+  padding: 5px;
+}
+
+input[type="submit"] {
+  width: 150px;
+}
+
+textarea {
+  min-height: 200px;
+}
+
+.form-control {
+  width: 100%;
+}
+
+@media (min-width: 37.5em) {
+  .col-3 {
+    grid-column-end: 2 span;
+  }
+}
