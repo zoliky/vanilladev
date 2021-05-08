@@ -1,0 +1,43 @@
+:root {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #fff;
+}
+
+h1 {
+  text-align: center;
+  font-weight: 400;
+  font-size: 2.3rem;
+}
+
+h2 {
+  margin-left: 10px;
+}
+
+.gallery-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+.my-gallery {
+  display: grid;
+  justify-items: center;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  column-gap: 10px;
+}
+
+figure img {
+  display: block;
+  box-shadow: 2px 2px 3px rgba(0,0,0,.4);
+}
